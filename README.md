@@ -25,6 +25,7 @@ A aplicação web está sendo desenvolvida utilizando as seguintes tecnologias e
     * **HTML5:** Para a estruturação semântica do conteúdo da aplicação.
     * **CSS3:** Para a estilização e design responsivo, garantindo uma boa experiência em diferentes dispositivos.
     * **JavaScript (Vanilla JS):** Para a interatividade da interface, manipulação dinâmica do conteúdo e lógica do lado do cliente.
+    * **Bootstrap:** Com base no primeiro código criado, percebemos que seria mais facil com o nosso aprendizado na matéria de front-end usar a bibliotéca do Bootstrap.
 * **Armazenamento de Dados (Inicial):**
     * **`localStorage` do Navegador:** Para uma persistência básica de dados (como denúncias e avaliações) diretamente no navegador do usuário, como uma primeira etapa antes da implementação de um backend mais robusto.
 * **Modelo Colaborativo:**

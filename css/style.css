@@ -1,0 +1,72 @@
+/* Ajustes para o logo na navbar */
+.navbar .logo {
+    width: 40px; /* Reduzi um pouco o tamanho padrão do Bootstrap */
+    height: auto;
+    margin-right: 10px;
+}
+
+
+
+/* Ajustes para o texto do brand na navbar */
+.navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem; /* Equivalente a 1.5em */
+    color: var(--bs-white) !important; /* Força a cor branca do Bootstrap */
+}
+
+/* Cores customizadas se quiser usar as variáveis CSS do Bootstrap */
+ :root {
+    --bs-primary: #4CAF50;
+    --bs-success: #388E3C;
+}
+
+/* Estilo para o botão no final da página Home */
+.button-link {
+    display: inline-block; /* Para o padding e margem funcionarem */
+    background-color: var(--bs-primary); /* Usa a cor primária do Bootstrap */
+    color: white;
+    padding: 10px 20px;
+    border-radius: .25rem; /* Borda arredondada do Bootstrap */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: var(--bs-success); /* Cor de sucesso do Bootstrap ao passar o mouse */
+    color: white;
+}
+
+/* Ajuste de margem para o footer */
+footer {
+    margin-top: 2rem; /* Margem superior usando utilitário de espaçamento do Bootstrap */
+}
+
+/* Ajuste para o texto do footer, se necessário */
+footer p {
+    margin-bottom: .5rem; /* Margem padrão do Bootstrap para parágrafos */
+}
+
+/* Estilos para os itens de denúncia (cards) na lista */
+/* Bootstrap já tem o .card, então usaremos classes para o conteúdo interno */
+.denuncia-item .card-title {
+    color: var(--bs-success); /* Usando a cor de sucesso do Bootstrap */
+}
+
+.denuncia-item .card-text strong {
+    color: var(--bs-success);
+}
+
+.denuncia-item .data-denuncia {
+    font-size: 0.85em;
+    color: #666;
+    text-align: right;
+    margin-top: 1rem;
+    border-top: 1px dashed var(--bs-gray-400); /* Usando uma cor de cinza do Bootstrap */
+    padding-top: 10px;
+}
+
+/* Remover bullets da lista se não usar as classes do Bootstrap */
+ul {
+    list-style: none;
+    padding-left: 0;
+}

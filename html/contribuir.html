@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Contribuição | INCLUCITY 🤝</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="imagens/logo.png" type="image/png">
+    <link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <alt="Logo Acessibilidade Urbana" class="logo">
+                Acessibilidade Urbana
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contribuir.html">Enviar Contribuição</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista-contribuicoes.html">Contribuições Recentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="locais.html">Locais Recomendados</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4" style="padding-bottom: 70px;">
+        <section id="form-contribuicao" class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="card-title text-success mb-3 pb-2 border-bottom border-secondary">Envie Sua Contribuição</h2>
+                <p class="card-text mb-4">Relate um problema de acessibilidade ou sugira uma melhoria para um local. Sua contribuição é valiosa!</p>
+                <form id="denunciaForm">
+                    <div class="mb-3">
+                        <label for="localNome" class="form-label">Nome do Local (Ex: Restaurante Sabor, Rua Principal):</label>
+                        <input type="text" class="form-control" id="localNome" required placeholder="Nome do estabelecimento ou logradouro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="localEndereco" class="form-label">Endereço Completo (Ex: Av. Brasil, 123 - Centro, Maringá-PR):</label>
+                        <input type="text" class="form-control" id="localEndereco" required placeholder="Endereço, cidade e estado">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoProblema" class="form-label">Tipo de Problema/Melhoria:</label>
+                        <select class="form-select" id="tipoProblema" required>
+                            <option value="">Selecione...</option>
+                            <option value="rampa-ausente">Rampa Ausente/Inadequada</option>
+                            <option value="sinalizacao-tatil">Falta/Deficiência de Sinalização Tátil</option>
+                            <option value="elevador-inacessivel">Elevador/Plataforma Inacessível</option>
+                            <option value="calcada-danificada">Calçada Danificada/Irregular</option>
+                            <option value="banheiro-inacessivel">Banheiro Inacessível</option>
+                            <option value="transporte-publico">Problema no Transporte Público</option>
+                            <option value="estacionamento-pcd">Falta/Uso Indevido de Vaga PCD</option>
+                            <option value="acesso-geral">Acesso Geral Dificultado</option>
+                            <option value="outros">Outros (descreva abaixo)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">Descrição Detalhada do Problema ou Sugestão:</label>
+                        <textarea class="form-control" id="descricao" rows="6" required placeholder="Descreva o problema ou sugestão com o máximo de detalhes. Inclua contexto, localização exata e impacto (se aplicável)."></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="anonimo">
+                        <label class="form-check-label" for="anonimo">Enviar Contribuição Anônima</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Contribuição</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2024 Acessibilidade Urbana. Todos os direitos reservados.</p>
+            <p class="mb-0">ODS 11: Cidades e Comunidades Sustentáveis</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+</body>
+</html>

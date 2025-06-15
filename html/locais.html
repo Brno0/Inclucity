@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locais Recomendados | INCLUCITY 🤝</title>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="imagens/logo.png" rel="icon" type="image/png"/>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+                Acessibilidade Urbana
+            </a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contribuir.html">Enviar Contribuição</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="lista-contribuicoes.html">Contribuições Recentes</a>
+</li>
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="locais.html">Locais Recomendados</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main class="container my-4">
+</main>
+<section class="container my-4" id="locais-pcd">
+<div class="card shadow-sm">
+<div class="card-body">
+<h2 class="card-title text-success mb-3 pb-2 border-bottom border-secondary">Locais Recomendados para PCD</h2>
+<div class="d-flex flex-column gap-3" id="lista-locais"></div>
+</div>
+</div>
+</section>
+<script>
+const locaisInclusivos = [
+  {
+    nome: "Biblioteca Central",
+    descricao: "Rampa de acesso, elevador e banheiro adaptado disponíveis.",
+    mapa: "https://www.google.com/maps?q=Biblioteca+Central"
+  },
+  {
+    nome: "Restaurante Acessível",
+    descricao: "Entrada nivelada, cardápio em braile e mesas adaptadas.",
+    mapa: "https://www.google.com/maps?q=Restaurante+Acessível"
+  },
+  {
+    nome: "Parque da Inclusão",
+    descricao: "Pisos táteis, banheiros adaptados e trilhas acessíveis.",
+    mapa: "https://www.google.com/maps?q=Parque+da+Inclusão"
+  }
+];
+
+if (!localStorage.getItem("locaisInclusivos")) {
+  localStorage.setItem("locaisInclusivos", JSON.stringify(locaisInclusivos));
+}
+
+function renderLocais() {
+  const container = document.getElementById("lista-locais");
+  const locais = JSON.parse(localStorage.getItem("locaisInclusivos")) || [];
+  container.innerHTML = "";
+
+  locais.forEach(local => {
+    const card = document.createElement("div");
+    card.className = "border rounded p-3 d-flex justify-content-between align-items-center";
+
+    const texto = document.createElement("div");
+    texto.innerText = local.descricao;
+
+    const botaoMapa = document.createElement("a");
+    botaoMapa.href = local.mapa;
+    botaoMapa.target = "_blank";
+    botaoMapa.className = "btn btn-outline-primary rounded-pill";
+    botaoMapa.innerText = "Mapa";
+
+    card.appendChild(texto);
+    card.appendChild(botaoMapa);
+
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderLocais);
+</script>
+<footer class="bg-dark text-white text-center py-3">
+<div class="container">
+<p class="mb-1">© 2024 Acessibilidade Urbana. Todos os direitos reservados.</p>
+<p class="mb-0">ODS 11: Cidades e Comunidades Sustentáveis</p>
+</div>
+</footer>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const locaisInclusivos = [
+  {
+    nome: "Biblioteca Central",
+    descricao: "Rampa de acesso, elevador e banheiro adaptado disponíveis.",
+    endereco: "Rua das Letras, 123 - Centro",
+    acessibilidade: "Excelente",
+    mapa: "https://www.google.com/maps?q=Biblioteca+Central"
+  },
+  {
+    nome: "Restaurante Acessível",
+    descricao: "Entrada nivelada, cardápio em braile e mesas adaptadas.",
+    endereco: "Av. Principal, 456 - Bairro Novo",
+    acessibilidade: "Bom",
+    mapa: "https://www.google.com/maps?q=Restaurante+Acessível"
+  },
+  {
+    nome: "Parque da Inclusão",
+    descricao: "Pisos táteis, banheiros adaptados e trilhas acessíveis.",
+    endereco: "Praça Verde, 789 - Jardim das Flores",
+    acessibilidade: "Regular",
+    mapa: "https://www.google.com/maps?q=Parque+da+Inclusão"
+  }
+];
+
+if (!localStorage.getItem("locaisInclusivos")) {
+  localStorage.setItem("locaisInclusivos", JSON.stringify(locaisInclusivos));
+}
+
+function renderLocais() {
+  const container = document.getElementById("lista-locais");
+  const locais = JSON.parse(localStorage.getItem("locaisInclusivos")) || [];
+  container.innerHTML = "";
+
+  locais.forEach(local => {
+    const card = document.createElement("div");
+    card.className = "border rounded p-3";
+
+    const titulo = document.createElement("h5");
+    titulo.className = "text-success fw-bold";
+    titulo.innerText = local.nome;
+
+    const descricao = document.createElement("p");
+    descricao.className = "mb-1";
+    descricao.innerText = local.descricao;
+
+    const endereco = document.createElement("p");
+    endereco.className = "mb-1 text-muted";
+    endereco.innerHTML = "<strong>Endereço:</strong> " + local.endereco;
+
+    const badge = document.createElement("span");
+    badge.className = "badge";
+    if (local.acessibilidade === "Excelente") {
+      badge.classList.add("bg-success");
+    } else if (local.acessibilidade === "Bom") {
+      badge.classList.add("bg-warning", "text-dark");
+    } else {
+      badge.classList.add("bg-danger");
+    }
+    badge.innerText = local.acessibilidade;
+
+    const mapa = document.createElement("a");
+    mapa.href = local.mapa;
+    mapa.target = "_blank";
+    mapa.className = "btn btn-outline-primary btn-sm rounded-pill ms-3";
+    mapa.innerText = "Ver no mapa";
+
+    const rodape = document.createElement("div");
+    rodape.className = "d-flex align-items-center mt-2";
+    rodape.appendChild(badge);
+    rodape.appendChild(mapa);
+
+    card.appendChild(titulo);
+    card.appendChild(descricao);
+    card.appendChild(endereco);
+    card.appendChild(rodape);
+
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderLocais);
+</script>
+
+<!-- Seção de Locais Recomendados para PCD -->
+</body>
+</html>
